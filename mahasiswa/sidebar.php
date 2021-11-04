@@ -26,31 +26,31 @@
         Skripsi
     </div>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="judulproposal-isi.php">
             <i class="fas fa-fw fa-file"></i>
             <span>Judul Proposal</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="ujianproposal-isi.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Ujian Proposal</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="ujiankompre-isi.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Ujian Komprehensif</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="seminarhasil-isi.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Seminar Hasil</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="sidangskripsi-isi.php">
             <i class="fas fa-fw fa-gavel"></i>
             <span>Sidang Skripsi</span>
         </a>

@@ -37,7 +37,7 @@
               <div class="col-md-12">
                 <div class="main-timeline">
                   <div class="timeline">
-                    <a href="#" class="timeline-content">
+                    <a href="judulproposal-isi.php" class="timeline-content">
                       <div class="timeline-year">1</div>
                       <div class="timeline-icon"><i class="fa fa-file"></i></div>
                       <h3 class="title">Pengajuan Judul Proposal</h3>
@@ -48,7 +48,7 @@
                     </a>
                   </div>
                   <div class="timeline">
-                    <a href="#" class="timeline-content">
+                    <a href="ujianproposal-isi.php" class="timeline-content">
                       <div class="timeline-year">2</div>
                       <div class="timeline-icon"><i class="fa fa-comments"></i></div>
                       <h3 class="title">Ujian Proposal</h3>
@@ -61,7 +61,7 @@
                     </a>
                   </div>
                   <div class="timeline">
-                    <a href="#" class="timeline-content">
+                    <a href="ujiankompre-isi.php" class="timeline-content">
                       <div class="timeline-year">3</div>
                       <div class="timeline-icon"><i class="fa fa-comments"></i></div>
                       <h3 class="title">Ujian Komprehensif</h3>
@@ -72,7 +72,7 @@
                     </a>
                   </div>
                   <div class="timeline">
-                    <a href="#" class="timeline-content">
+                    <a href="seminarhasil-isi.php" class="timeline-content">
                       <div class="timeline-year">4</div>
                       <div class="timeline-icon"><i class="fa fa-comments"></i></div>
                       <h3 class="title">Seminar Hasil</h3>
@@ -85,7 +85,7 @@
                     </a>
                   </div>
                   <div class="timeline">
-                    <a href="#" class="timeline-content">
+                    <a href="sidangskripsi-isi.php" class="timeline-content">
                       <div class="timeline-year">5</div>
                       <div class="timeline-icon"><i class="fa fa-gavel"></i></div>
                       <h3 class="title">Sidang Skripsi</h3>
