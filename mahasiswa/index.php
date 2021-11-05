@@ -43,7 +43,9 @@
                       <h3 class="title">Pengajuan Judul Proposal</h3>
                       <p class="description">
                         <b>Syarat :</b> </br>
-                        - Form Pengajuan Judul
+                        - Form Pengajuan Judul<br />
+                        <br />
+                        <b>Status :</b> SELESAI
                       </p>
                     </a>
                   </div>
@@ -56,7 +58,9 @@
                         <b>Syarat :</b> </br>
                         - Lembar Persetujuan Pembimbing<br />
                         - Bukti lulus matakuliah Metode Penelitian & Seminar (KHS)<br />
-                        - Berkas Proposal lengkap
+                        - Berkas Proposal lengkap<br />
+                        <br />
+                        <b>Status :</b> TERJADWAL
                       </p>
                     </a>
                   </div>
@@ -68,6 +72,8 @@
                       <p class="description">
                         <b>Syarat :</b> </br>
                         - Bukti lulus ujian proposal<br />
+                        <br />
+                        <b>Status :</b> -
                       </p>
                     </a>
                   </div>
@@ -81,6 +87,8 @@
                         - Bukti lulus Ujian Komprehensif<br />
                         - Kartu kendali bukti konsultasi<br />
                         - Lembar persetujuan seminar hasil<br />
+                        <br />
+                        <b>Status :</b> -
                       </p>
                     </a>
                   </div>
@@ -102,6 +110,8 @@
                         - Sertifikat TOEFL<br />
                         - Sertifikat Bahasa Arab<br />
                         - Form Alumni yang sudah di tanda tangani<br />
+                        <br />
+                        <b>Status :</b> -
                       </p>
                     </a>
                   </div>

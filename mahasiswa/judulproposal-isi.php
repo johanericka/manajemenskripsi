@@ -66,26 +66,25 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Bidang Minat</label>
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" value="Sensor" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Judul</label>
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" value="Perbandingan Sensitivitas Sensor Suhu dan Kelembaban DHT-11 dan DHT-22 Pada Studi Kasus Smart Green House" required>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Upload Form Pengajuan Judul</label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile02" />
-                                                <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                        <div class="col-md-4">
+                                            <div class="card mb-4 box-shadow">
+                                                <img class="card-img-top" src="../img/noimage.png" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <p class="card-text">Upload Form Pengajuan Judul</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div class="btn-group">
+                                                            <input type="file" class="form-control" id="inputGroupFile02" />
+                                                            <button type="button" class="btn btn-sm btn-primary">Upload</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <script>
-                                                $('#inputGroupFile02').on('change', function() {
-                                                    //get the file name
-                                                    var fileName = $(this).val();
-                                                    //replace the "Choose a file" label
-                                                    $(this).next('.custom-file-label').html(fileName);
-                                                })
-                                            </script>
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-lg btn-block">Ajukan</button>
                                     </form>
