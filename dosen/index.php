@@ -39,47 +39,6 @@
               <li class="breadcrumb-item active" aria-current="page">Jadwal Ujian</li>
             </ol>
           </div>
-          <!-- ujian hari ini -->
-          <div class="row">
-            <!-- Datatables -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jadwal Ujian Hari Ini 8 Nopember 2021</h6>
-                </div>
-                <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush" id="dataTable">
-                    <thead class="thead-light">
-                      <tr>
-                        <th class="text-center">No</th>
-                        <th class="text-center">Ujian</th>
-                        <th class="text-center">Nama</th>
-                        <th class="text-center">NIM</th>
-                        <th class="text-center">Penguji 1</th>
-                        <th class="text-center">Penguji 2</th>
-                        <th class="text-center">Jam</th>
-                        <th class="text-center">Tempat</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Ujian Proposal</td>
-                        <td>Johan Ericka</td>
-                        <td>09630001</td>
-                        <td>Dr. Imam Tazi</td>
-                        <td>Irjan, M.Si</td>
-                        <td>08.00 - 09.00 WIB</td>
-                        <td>Ruang Rapat Prodi</td>
-                      </tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
 
           <!-- pengajuan ujian -->
           <div class="row">
@@ -103,10 +62,10 @@
                     <tbody>
                       <tr>
                         <td>1</td>
-                        <td>Ujian Proposal</td>
+                        <td>Judul Proposal</td>
                         <td>Fulanah</td>
                         <td>09630333</td>
-                        <td class="text-center"><a href="ujianproposal-tampil.php" class="btn btn-success" type="button">LIHAT</a></td>
+                        <td class="text-center"><a href="judulproposal-tampil.php" class="btn btn-success" type="button">LIHAT</a></td>
                       </tr>
                       <tr>
                         <td>2</td>
