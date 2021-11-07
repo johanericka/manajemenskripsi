@@ -73,15 +73,19 @@
                                             <input type="text" class="form-control" value="Perbandingan Sensitivitas Sensor Suhu dan Kelembaban DHT-11 dan DHT-22 Pada Studi Kasus Smart Green House" required>
                                         </div>
                                         <div class="form-group">
-                                            <label>Formulir Pengajuan Judul</label><br />
-                                            <object width="100%" height="400" type="application/pdf" data="../uploads/09630123-formpengajuanjudul.pdf">
-                                                <p>Insert your error message here, if the PDF cannot be displayed.</p>
-                                            </object>
+                                            <label>Dosen Pembimbing</label>
+                                            <select class="form-control">
+                                                <option>Dr. Imam Tazi, M.Si | 4</option>
+                                                <option>Drs. M. Tirono, M.Si | 3</option>
+                                                <option>Dr. H. Agus Mulyono, M.Kes | 6</option>
+                                                <option>Farid Samsu Hananto, M.T | 2</option>
+                                                <option>Irjan, M.Si | 3</option>
+                                            </select>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Dosen Pembimbing</label>
+                                                    <label for="exampleFormControlSelect1">Dosen Penguji 1</label>
                                                     <select class="form-control">
                                                         <option>Dr. Imam Tazi, M.Si | 4</option>
                                                         <option>Drs. M. Tirono, M.Si | 3</option>
@@ -104,6 +108,37 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="album py-5 bg-light">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="card mb-4 box-shadow">
+                                                            <img class="card-img-top" src="../img/noimage.png" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <p class="card-text">Lembar Persetujuan Pembimbing</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="card mb-4 box-shadow">
+                                                            <img class="card-img-top" src="../img/noimage.png" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <p class="card-text">Kartu Hasil Studi</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="card mb-4 box-shadow">
+                                                            <img class="card-img-top" src="../img/noimage.png" alt="Card image cap">
+                                                            <div class="card-body">
+                                                                <p class="card-text">Berkas File Proposal Lengkap</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="form-group row">
                                             <div class="col-sm-6">
                                                 <button type="submit" onclick="return confirm('Apakah anda yakin ?')" class="btn btn-primary btn-block" id="btn-submit">

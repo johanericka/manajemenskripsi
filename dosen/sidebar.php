@@ -16,31 +16,31 @@
         Jadwal Ujian
     </div>
     <li class="nav-item">
-        <a class="nav-link" href="judulproposal-isi.php">
+        <a class="nav-link" href="judulproposal-tampil.php">
             <i class="fas fa-fw fa-file"></i>
             <span>Judul Proposal</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="ujianproposal-isi.php">
+        <a class="nav-link" href="ujianproposal-tampil.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Ujian Proposal</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="ujiankompre-isi.php">
+        <a class="nav-link" href="ujiankompre-tampil.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Ujian Komprehensif</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="seminarhasil-isi.php">
+        <a class="nav-link" href="seminarhasil-tampil.php">
             <i class="fas fa-fw fa-comments"></i>
             <span>Seminar Hasil</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="sidangskripsi-isi.php">
+        <a class="nav-link" href="sidangskripsi-tampil.php">
             <i class="fas fa-fw fa-gavel"></i>
             <span>Sidang Skripsi</span>
         </a>
