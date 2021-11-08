@@ -79,27 +79,15 @@
                                             </object>
                                         </div>
                                         <div class="form-group row">
-                                            <div class="col-sm-6">
+                                            <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <label for="exampleFormControlSelect1">Dosen Pembimbing</label>
                                                     <select class="form-control">
-                                                        <option>Dr. Imam Tazi, M.Si | 4</option>
-                                                        <option>Drs. M. Tirono, M.Si | 3</option>
-                                                        <option>Dr. H. Agus Mulyono, M.Kes | 6</option>
-                                                        <option>Farid Samsu Hananto, M.T | 2</option>
-                                                        <option>Irjan, M.Si | 3</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlSelect1">Dosen Penguji 2</label>
-                                                    <select class="form-control">
-                                                        <option>Dr. Imam Tazi, M.Si | 4</option>
-                                                        <option>Drs. M. Tirono, M.Si | 3</option>
-                                                        <option>Dr. H. Agus Mulyono, M.Kes | 6</option>
-                                                        <option>Farid Samsu Hananto, M.T | 2</option>
-                                                        <option>Irjan, M.Si | 3</option>
+                                                        <option>Dr. Imam Tazi, M.Si (4)</option>
+                                                        <option>Drs. M. Tirono, M.Si (3)</option>
+                                                        <option>Dr. H. Agus Mulyono, M.Kes (6)</option>
+                                                        <option>Farid Samsu Hananto, M.T (2)</option>
+                                                        <option>Irjan, M.Si (3)</option>
                                                     </select>
                                                 </div>
                                             </div>

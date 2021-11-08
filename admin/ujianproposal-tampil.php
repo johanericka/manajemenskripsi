@@ -86,7 +86,26 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Dosen Penguji</button>
+
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label>Tanggal Pelaksanaan</label>
+                                                    <input type="datetime-local" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1">Ruang</label>
+                                                    <select class="form-control">
+                                                        <option>Ruang Rapat Prodi</option>
+                                                        <option>Ruang Kaprodi</option>
+                                                        <option>Ruang Dosen</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Simpan</button>
                                     </form>
                                 </div>
                             </div>
