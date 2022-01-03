@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/uinlogo.png" rel="icon">
-  <title>Pelayanan Online | Login</title>
+  <title>Manajemen SKRIPSI</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -58,12 +58,12 @@
                   <div class="row">
                     <div class="col">
                       <div class="text-center">
-                        <a class="font-weight-bold" href="register.html">Daftar Akun</a>
+                        <a class="font-weight-bold" href="daftar.php">Daftar Akun</a>
                       </div>
                     </div>
                     <div class="col">
                       <div class="text-center">
-                        <a class="font-weight-bold" href="register.html">Lupa Password</a>
+                        <a class="font-weight-bold" href="lupa.php">Lupa Password</a>
                       </div>
                     </div>
                   </div>
