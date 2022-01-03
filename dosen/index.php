@@ -1,3 +1,15 @@
+<?php
+session_start();
+$userid = $_SESSION['userid'];
+global $userid;
+$role = $_SESSION['role'];
+$jabatan = $_SESSION['jabatan'];
+if ($role != 'dosen') {
+  header("location:../deauth.php");
+}
+require('../config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

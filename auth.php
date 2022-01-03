@@ -2,48 +2,43 @@
 session_start();
 require('config.php');
 
-if (!isset($_POST['userid'], $_POST['password'])) {
-    header('location:index.php?pesan=gagal');
-}
-
 $userid = mysqli_real_escape_string($conn, $_POST['userid']);
-$password = mysqli_real_escape_string($conn, strtolower($_POST['password']));
+$pass = mysqli_real_escape_string($conn, strtolower($_POST['password']));
+$md5pass = md5($pass);
 $kunci = mysqli_real_escape_string($conn, strtolower($_POST['kunci']));
 $hasil = mysqli_real_escape_string($conn, strtolower($_POST['hasil']));
 
 if ($kunci == $hasil) {
-    $sql = mysqli_query($conn, "SELECT * FROM pengguna WHERE user='$userid' AND plaintext='$password'");
-    $jmldata = mysqli_num_rows($sql);
-    if ($jmldata > 0) {
-        $datauser = mysqli_fetch_array($sql);
-        $nama = $datauser['nama'];
-        $nim = $datauser['nim'];
-        $role = $datauser['role'];
-        $email = $datauser['email'];
-        $status = $datauser['status'];
-        $prodi = $datauser['prodi'];
-        $qjenjang = mysqli_query($conn, "SELECT DISTINCT(jenjang) FROM prodi WHERE namaprodi='$prodi'");
-        $djenjang = mysqli_fetch_array($qjenjang);
-        $jenjang = $djenjang[0];
+    $stmt = $conn->prepare("SELECT * FROM pengguna WHERE userid=? AND pass=?");
+    $stmt->bind_param("ss", $userid, $md5pass);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $juser = $result->num_rows;
 
-        if ($status == 0) {
-            header('location:index.php?pesan=notactive');
-        } else {
-            $_SESSION['userid'] = $userid;
-            $_SESSION['nim'] = $nim;
-            $_SESSION['nama'] = $nama;
-            $_SESSION['role'] = $role;
-            $_SESSION['prodi'] = $prodi;
-            $_SESSION['email'] = $email;
-            $_SESSION['jenjang'] = $jenjang;
+    //jika data ditemukan
+    if ($juser > 0) {
+        //ambil data
+        $dhasil = $result->fetch_assoc();
+        $nama = $dhasil['nama'];
+        $nim = $dhasil['nim'];
+        $role = $dhasil['role'];
+        $jabatan = $dhasil['jabatan'];
+        $email = $dhasil['email'];
 
-            if ($role == 'adminprodi' or $role == 'adminfakultas') {
-                header('location:admin/index.php');
-            } elseif ($role == 'dosen') {
-                header('location:dosen/index.php');
-            } elseif ($role == 'mahasiswa') {
-                header('location:mahasiswa/index.php');
-            }
+        //set settion
+        $_SESSION['userid'] = $userid;
+        $_SESSION['nim'] = $nim;
+        $_SESSION['nama'] = $nama;
+        $_SESSION['role'] = $role;
+        $_SESSION['jabatan'] = $jabatan;
+        $_SESSION['email'] = $email;
+
+        if ($role == 'admin') {
+            header('location:admin/index.php');
+        } elseif ($role == 'dosen') {
+            header('location:dosen/index.php');
+        } elseif ($role == 'mahasiswa') {
+            header('location:mahasiswa/index.php');
         }
     } else {
         header('location:index.php?pesan=gagal');

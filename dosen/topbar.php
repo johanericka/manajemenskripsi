@@ -7,7 +7,7 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="../img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small"><?= 'Mahasiswa' ?></span>
+                <span class="ml-2 d-none d-lg-inline text-white small"><?= $_SESSION['nama']; ?></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -35,11 +35,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Apakah anda akan keluar dari Sistem Pelayanan Online ini ?</p>
+                <p>Keluar dari sistem ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Batal</button>
-                <a href="deauth.php" class="btn btn-primary">Keluar</a>
+                <a href="../deauth.php" class="btn btn-primary">Keluar</a>
             </div>
         </div>
     </div>

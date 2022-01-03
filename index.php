@@ -30,10 +30,10 @@
                     <img src="img/uinlogo.png" width="100px">
                     <h1 class="h4 text-gray-900 mb-4">Sistem Manajemen Skripsi</h1>
                   </div>
-                  <form class="user">
+                  <form action="auth.php" method="POST">
                     <div class="form-group">
                       <label>User ID</label>
-                      <input type="text" class="form-control" name="username" required>
+                      <input type="text" class="form-control" name="userid" required>
                     </div>
                     <div class="form-group">
                       <label>Password</label>
@@ -50,9 +50,7 @@
                       <input type="hidden" name="kunci" value="<?= $kunci; ?>">
                     </div>
                     <hr>
-                    <div class="form-group">
-                      <a href="mahasiswa/index.php" class="btn btn-primary btn-block">M A S U K</a>
-                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">MASUK</button>
                   </form>
                   <hr>
                   <div class="row">
