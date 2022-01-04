@@ -1,6 +1,7 @@
 <?php
 session_start();
 $userid = $_SESSION['userid'];
+$nim = $_SESSION['nim'];
 global $userid;
 $role = $_SESSION['role'];
 $jabatan = $_SESSION['jabatan'];
@@ -8,6 +9,7 @@ if ($role != 'mahasiswa') {
     header("location:../deauth.php");
 }
 require('../config.php');
+require('../vendor/myfunc.php');
 ?>
 
 <!DOCTYPE html>
@@ -45,10 +47,10 @@ require('../config.php');
                 <!-- Container Fluid-->
                 <div class="container-fluid" id="container-wrapper">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Proses Ujian</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Proses Skripsi</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Proses Ujian</li>
+                            <li class="breadcrumb-item active" aria-current="page">Proses Skripsi</li>
                         </ol>
                     </div>
                     <!-- ujian hari ini -->
@@ -64,58 +66,61 @@ require('../config.php');
                                         <thead class="thead-light">
                                             <tr>
                                                 <th class="text-center">No</th>
-                                                <th class="text-center">Ujian</th>
+                                                <th class="text-center">Proses</th>
                                                 <th class="text-center">Waktu</th>
                                                 <th class="text-center">Tempat</th>
                                                 <th class="text-center">Status</th>
                                                 <th class="text-center">Aksi</th>
                                             </tr>
                                         </thead>
+                                        <!-- ambil data pengajuan judul-->
+                                        <?php
+                                        $stmt = $conn->prepare("SELECT * FROM pengajuanjudul WHERE nim=?");
+                                        $stmt->bind_param("s", $nim,);
+                                        $stmt->execute();
+                                        $result = $stmt->get_result();
+                                        $dhasil = $result->fetch_assoc();
+                                        $tanggal = $dhasil['tanggal'];
+                                        $pembimbing = $dhasil['pembimbing'];
+                                        $status = $dhasil['status'];
+                                        $token = $dhasil['token'];
+                                        $keterangan = $dhasil['keterangan'];
+                                        ?>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
                                                 <td>Pengajuan Judul</td>
-                                                <td>4 November 2021 jam 08.00 - 09.00 WIB</td>
-                                                <td>Ruang Rapat Prodi</td>
+                                                <td><?= tgljam_indo($tanggal); ?></td>
+                                                <td>-</td>
                                                 <td>
-                                                    Selesai
+                                                    <?php
+                                                    if ($status == 0) {
+                                                        echo 'Menunggu Verifikasi';
+                                                    } elseif ($status == 1) {
+                                                        echo 'Disetujui';
+                                                    } elseif ($status == 2) {
+                                                        echo 'Ditolak';
+                                                    }
+                                                    ?>
                                                 </td>
                                                 <td>
-                                                    <a href="#" class="btn btn-success" type="button"><i class="fa fa-print" aria-hidden="true"></i></a>
+                                                    <?php
+                                                    if ($status == 0) {
+                                                    ?>
+                                                        <a href="#" class="btn btn-secondary" type="button" onclick="alert('Menunggu Verifikasi');"><i class="fa fa-spinner" aria-hidden="true"></i></a>
+                                                    <?php
+                                                    } elseif ($status == 1) {
+                                                    ?>
+                                                        <a href="judulproposal-detail.php?token=<?= $token; ?>" class="btn btn-success" type="button"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                                                    <?php
+                                                    } elseif ($status == 2) {
+                                                    ?>
+                                                        <a href="#" class="btn btn-danger" type="button" onclick="alert('Alasan <?= $keterangan; ?>');"><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>
+                                                    <?php
+                                                    }
+                                                    ?>
+
                                                 </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Ujian Proposal</td>
-                                                <td>10 November 2021 jam 08.00 - 09.00 WIB</td>
-                                                <td>Ruang Rapat Prodi</td>
-                                                <td>
-                                                    Terjadwal
-                                                </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning" type="button"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Ujian Komprehensif</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Seminar Hasil</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Sidang Skripsi</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
                                             </tr>
                                         </tbody>
                                     </table>

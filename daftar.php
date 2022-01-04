@@ -72,7 +72,7 @@
                       $angka2 = rand(1, 9);
                       $kunci = $angka1 + $angka2;
                       ?>
-                      <label><b><?= huruf($angka1); ?> + <?= huruf($angka2); ?></b> (angka) ?</label>
+                      <label><b><?= huruf($angka1); ?> ditambah <?= huruf($angka2); ?></b> (angka) ?</label>
                       <input type="number" class="form-control" name="hasil" id="hasil" required>
                     </div>
                     <hr>

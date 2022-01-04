@@ -23,12 +23,12 @@
     </li>
     <hr class="sidebar-divider">
     <div class="sidebar-heading">
-        Skripsi
+        Pendaftaran
     </div>
     <li class="nav-item">
         <a class="nav-link" href="judulproposal-isi.php">
             <i class="fas fa-fw fa-file"></i>
-            <span>Judul Proposal</span>
+            <span>Pengajuan Judul</span>
         </a>
     </li>
     <li class="nav-item">
@@ -52,7 +52,7 @@
     <li class="nav-item">
         <a class="nav-link" href="sidangskripsi-isi.php">
             <i class="fas fa-fw fa-gavel"></i>
-            <span>Sidang Skripsi</span>
+            <span>Ujian Skripsi</span>
         </a>
     </li>
     <hr class="sidebar-divider">

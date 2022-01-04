@@ -12,14 +12,20 @@ $password2 = mysqli_real_escape_string($conn, $_POST['password2']);
 $passmd5 = md5($password);
 $token = md5(microtime());
 if ($kunci == $hasil) {
-	$quser = mysqli_query($conn, "SELECT * FROM pengguna WHERE nim='$nim' or email='$email'");
-	$nuser = mysqli_num_rows($quser);
-	if ($nuser > 0) {
+	$stmt = $conn->prepare("SELECT * FROM pengguna WHERE nim=? OR email=? OR nohp=? OR userid=?");
+	$stmt->bind_param("ssss", $nim, $email, $nohp, $userid);
+	$stmt->execute();
+	$result = $stmt->get_result();
+	$juser = $result->num_rows;
+
+	if ($juser > 0) {
 		header('location: index.php?pesan=exist');
 	} else {
 		if ($password == $password2) {
-			$qsimpan = mysqli_query($conn, "INSERT INTO pengguna (nama,nim,nohp,email,user,pass,plaintext,token)
-											VALUES ('$nama','$nim','$nohp','$email','$userid','$passmd5','$password','$token')");
+			$stmt = $conn->prepare("INSERT INTO pengguna (nama,nim,nohp,email,userid,pass,token)
+									VALUES (?,?,?,?,?,?,?)");
+			$stmt->bind_param("sssssss", $nama, $nim, $nohp, $email, $userid, $passmd5, $token);
+			$stmt->execute();
 			header('location:index.php?pesan=success');
 		} else {
 			header('location:daftar.php?pesan=passsalah');

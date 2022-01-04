@@ -30,6 +30,37 @@
                     <img src="img/uinlogo.png" width="100px">
                     <h1 class="h4 text-gray-900 mb-4">Sistem Manajemen Skripsi</h1>
                   </div>
+                  <!-- baca pesan -->
+                  <?php
+                  //ambil nilai variabel pesan di URL
+                  $pesan = $_GET['pesan'];
+                  if ($pesan == 'success') {
+                  ?>
+                    <div class="alert alert-success" role="alert">
+                      Pendaftaran pengguna berhasil
+                    </div>
+                  <?php
+                  } elseif ($pesan == 'exist') {
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <b>ERROR!!</b> Pengguna telah terdaftar
+                    </div>
+                  <?php
+                  } elseif ($pesan == 'passsalah') {
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <b>ERROR!!</b> Konfirmasi password tidak sama
+                    </div>
+                  <?php
+                  } elseif ($pesan == 'hitungsalah') {
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <b>ERROR!!</b> Perhitungan salah
+                    </div>
+                  <?php
+                  }
+                  ?>
+
                   <form action="auth.php" method="POST">
                     <div class="form-group">
                       <label>User ID</label>
